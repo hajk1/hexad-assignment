@@ -1,4 +1,6 @@
-package com.hexad;
+package com.hexad.service;
+
+import com.hexad.model.GoodType;
 
 import java.util.List;
 

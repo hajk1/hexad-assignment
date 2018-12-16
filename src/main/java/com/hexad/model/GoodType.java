@@ -1,4 +1,4 @@
-package com.hexad;
+package com.hexad.model;
 
 /**
  * Created by k1 on 12/16/18.
