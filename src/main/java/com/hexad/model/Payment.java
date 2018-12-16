@@ -5,13 +5,15 @@ package com.hexad.model;
  * email:<k1.tehrani@gmail.com>
  */
 public class Payment {
-    private final GoodType paidForGood;
+    private final GoodAndServiceType paidForGood;
+    private final Agent agent;
 
-    public Payment(GoodType paidForGood) {
+    public Payment(GoodAndServiceType paidForGood, Agent agent) {
         this.paidForGood = paidForGood;
+        this.agent = agent;
     }
 
-    public GoodType getPaidForGood() {
+    public GoodAndServiceType getPaidForGood() {
         return paidForGood;
     }
 }

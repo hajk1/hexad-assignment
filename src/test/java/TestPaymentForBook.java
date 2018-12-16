@@ -1,7 +1,7 @@
+import com.hexad.model.Agent;
 import com.hexad.model.Book;
 import com.hexad.model.Payment;
 import com.hexad.service.MasterRule;
-import com.hexad.service.RuleAware;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,9 +12,9 @@ import org.junit.Test;
 public class TestPaymentForBook {
 
     @Test
-    void testRulesCount() {
-        Payment payment = new Payment(new Book());
-        MasterRule masterRule = new MasterRule(new RuleAware[]{});
-        Assert.assertEquals(masterRule.process(payment.getPaidForGood()).size(), 3);
+    public void testActionsCount() {
+        Payment payment = new Payment(new Book(), new Agent("Joe"));
+        MasterRule masterRule = MasterRule.getInstance();
+        Assert.assertEquals(masterRule.process(payment.getPaidForGood()).size(), 0);
     }
 }

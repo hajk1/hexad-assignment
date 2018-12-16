@@ -1,6 +1,6 @@
 package com.hexad.service;
 
-import com.hexad.model.GoodType;
+import com.hexad.model.GoodAndServiceType;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import java.util.List;
  * email:<k1.tehrani@gmail.com>
  */
 public interface RuleAware {
-    List<Action> process(GoodType goodType);
+    List<Action> process(GoodAndServiceType goodAndServiceType);
 }
