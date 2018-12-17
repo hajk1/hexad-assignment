@@ -13,8 +13,8 @@ public class TestPaymentForBook {
 
     @Test
     public void testActionsCount() {
-        Payment payment = new Payment(new Book(), new Agent("Joe"));
-        MasterRule masterRule = MasterRule.getInstance();
-        Assert.assertEquals(masterRule.process(payment.getPaidForGood()).size(), 0);
+        Payment payment = new Payment(new Book(new Agent("Jack")));
+        MasterRule masterRule = new MasterRule();
+        Assert.assertEquals(masterRule.process(payment.getPaidForGood()).size(), 3);
     }
 }

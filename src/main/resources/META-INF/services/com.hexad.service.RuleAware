@@ -1,0 +1,4 @@
+com.hexad.service.rules.ActivateRule
+com.hexad.service.rules.BookPackRule
+com.hexad.service.rules.GenCommissionForBookOrPhysicalRule
+com.hexad.service.rules.PhysicalPackRule

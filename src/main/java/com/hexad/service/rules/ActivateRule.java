@@ -1,7 +1,7 @@
 package com.hexad.service.rules;
 
 import com.hexad.model.Membership;
-import com.hexad.model.parent.GoodAndServiceType;
+import com.hexad.model.parent.GoodAndService;
 import com.hexad.service.Action;
 import com.hexad.service.RuleAware;
 import com.hexad.service.actions.ActivateMembershipAction;
@@ -15,10 +15,10 @@ import java.util.List;
  */
 public class ActivateRule implements RuleAware {
     @Override
-    public List<Action> process(GoodAndServiceType goodAndServiceType) {
-      if (goodAndServiceType instanceof Membership) {
+    public List<Action> process(GoodAndService goodAndService) {
+      if (goodAndService instanceof Membership) {
         return Arrays
-            .asList(new Action[]{new ActivateMembershipAction((Membership) goodAndServiceType)});
+            .asList(new Action[]{new ActivateMembershipAction((Membership) goodAndService)});
       }
         return new ArrayList<>();
     }

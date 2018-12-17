@@ -1,7 +1,7 @@
 package com.hexad.service.rules;
 
 import com.hexad.model.Book;
-import com.hexad.model.parent.GoodAndServiceType;
+import com.hexad.model.parent.GoodAndService;
 import com.hexad.model.parent.Physical;
 import com.hexad.service.Action;
 import com.hexad.service.RuleAware;
@@ -17,11 +17,11 @@ import java.util.List;
 public class BookPackRule implements RuleAware {
 
   @Override
-  public List<Action> process(GoodAndServiceType goodAndServiceType) {
-    if (goodAndServiceType instanceof Book) {
+  public List<Action> process(GoodAndService goodAndService) {
+    if (goodAndService instanceof Book) {
       return Arrays.asList(
           new Action[]{
-              new PackageSlipAction((Physical) goodAndServiceType, "for the royalty department")});
+              new PackageSlipAction((Physical) goodAndService, "for the royalty department")});
     }
     return new ArrayList<>();
   }
