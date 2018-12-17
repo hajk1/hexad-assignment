@@ -17,17 +17,18 @@ public class MasterRule implements RuleAware {
   public MasterRule() {
     ServiceLoader<RuleAware> loader = ServiceLoader.load(RuleAware.class);
     for (RuleAware rule : loader) {
-      System.out.println(rule.getClass().getSimpleName()); // prints Dog, Cat
       rules.add(rule);
     }
-
   }
 
-  public List<Action> process(GoodAndService good) {
+  /**
+   * @return list of all actions which must be done based on the rules
+   */
+  public List<Action> process(GoodAndService goodAndService) {
     List<Action> actions = new ArrayList<Action>();
         for (RuleAware rule : rules) {
-            actions.addAll(rule.process(good));
+            actions.addAll(rule.process(goodAndService));
         }
-        return actions;
+    return actions;
     }
 }
