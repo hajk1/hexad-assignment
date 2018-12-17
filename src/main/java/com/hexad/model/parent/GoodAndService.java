@@ -8,7 +8,7 @@ import com.hexad.model.Agent;
  */
 public abstract class GoodAndService {
 
-  Agent agent;
+  private Agent agent;
 
   public GoodAndService(Agent agent) {
     this.agent = agent;
