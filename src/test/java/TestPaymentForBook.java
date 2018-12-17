@@ -18,13 +18,13 @@ import org.junit.Test;
 public class TestPaymentForBook {
 
   @Test
-  public void testActionsCount() {
+  public void testActions() {
     Payment payment = new Payment(new Book(new Agent("Jack")));
     MasterRule masterRule = new MasterRule();
     List<Action> actions = masterRule.process(payment.getPaidForGood());
-    Assert.assertEquals(actions.size(), 3);
+    Assert.assertEquals(3, actions.size());
     assertTrue(actions.stream().anyMatch(e -> e instanceof PackageSlipAction));
     assertTrue(actions.stream().anyMatch(e -> e instanceof GenerateCommissionAction));
-    Assert.assertEquals(actions.stream().filter(e -> e instanceof PackageSlipAction).count(), 2);
+    Assert.assertEquals(2, actions.stream().filter(e -> e instanceof PackageSlipAction).count());
   }
 }
