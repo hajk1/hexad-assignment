@@ -1,8 +1,7 @@
 package com.hexad.service;
 
-import com.hexad.model.GoodAndServiceType;
+import com.hexad.model.parent.GoodAndServiceType;
 import com.hexad.service.rules.ActivateRule;
-
 import java.util.ArrayList;
 import java.util.List;
 

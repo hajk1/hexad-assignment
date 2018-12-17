@@ -1,6 +1,6 @@
 package com.hexad.service.actions;
 
-import com.hexad.model.Physical;
+import com.hexad.model.parent.Physical;
 import com.hexad.service.Action;
 
 /**

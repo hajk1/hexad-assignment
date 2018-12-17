@@ -1,7 +1,6 @@
 package com.hexad.service;
 
-import com.hexad.model.GoodAndServiceType;
-
+import com.hexad.model.parent.GoodAndServiceType;
 import java.util.List;
 
 /**
