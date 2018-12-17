@@ -5,4 +5,8 @@ package com.hexad.model;
  * email:<k1.tehrani@gmail.com>
  */
 public class Upgrade extends Membership {
+
+  public Upgrade(Agent agent) {
+    super(agent);
+  }
 }

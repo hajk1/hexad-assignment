@@ -1,4 +1,4 @@
-package com.hexad.model;
+package com.hexad.model.action;
 
 import com.hexad.model.parent.PhysicalDelivery;
 import com.hexad.service.Action;

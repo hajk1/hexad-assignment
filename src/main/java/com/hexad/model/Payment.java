@@ -1,21 +1,20 @@
 package com.hexad.model;
 
-import com.hexad.model.parent.GoodAndServiceType;
+import com.hexad.model.parent.GoodAndService;
 
 /**
  * Created by k1 on 12/16/18.
  * email:<k1.tehrani@gmail.com>
  */
 public class Payment {
-    private final GoodAndServiceType paidForGood;
-    private final Agent agent;
 
-    public Payment(GoodAndServiceType paidForGood, Agent agent) {
+    private final GoodAndService paidForGood;
+
+    public Payment(GoodAndService paidForGood) {
         this.paidForGood = paidForGood;
-        this.agent = agent;
     }
 
-    public GoodAndServiceType getPaidForGood() {
+    public GoodAndService getPaidForGood() {
         return paidForGood;
     }
 }
