@@ -7,10 +7,10 @@ import com.hexad.service.Action;
  * Created by k1 on 12/17/18.
  * email:<k1.tehrani@gmail.com>
  */
-public class EmailOwner implements Action {
+public class ActivateMembershipAction implements Action {
     private final Membership membership;
 
-    public EmailOwner(Membership membership) {
+    public ActivateMembershipAction(Membership membership) {
         this.membership = membership;
     }
 }
